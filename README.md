@@ -1,1 +1,1 @@
-# international-journey-erasmus-school-of-law
+# international-journey-esl
