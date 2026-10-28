@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>International Journey | Erasmus School of Law</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #F1EFEC; }
+    * { box-sizing: border-box; }
+    ::selection { background: #AE1932; color: #FFFFFF; }
+  </style>
+</helmet>
+
+<div style="font-family: 'Montserrat', 'Helvetica Neue', sans-serif; background: #F1EFEC; min-height: 100vh">
+
+  <!-- ============ HERO ============ -->
+  <div data-screen-label="Hero" style="position: relative; min-height: 700px; overflow: hidden; background: #15090C">
+
+    <img src="img/hero.webp" alt="Two students walking and talking on campus" style="position: absolute; top: 0; right: 0; width: 64%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.92; display: block">
+
+    <div style="position: absolute; inset: 0; background: #AE1932; clip-path: polygon(0 0, 58% 0, 37% 100%, 0 100%)"></div>
+
+    <!-- floating journey tags over the photo -->
+    <div style="position: absolute; top: 150px; right: 56px; display: flex; z-index: 2; box-shadow: 0 14px 34px rgba(0,0,0,0.25)">
+      <div style="background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 20px; padding: 16px 20px">01</div>
+      <div style="background: #FFFFFF; color: #141414; font-weight: 800; font-size: 22px; letter-spacing: 0.04em; padding: 16px 26px; display: flex; align-items: center">DREAM IT</div>
+    </div>
+    <div style="position: absolute; top: 360px; right: 380px; display: flex; z-index: 2; box-shadow: 0 14px 34px rgba(0,0,0,0.25)">
+      <div style="background: #141414; color: #FFFFFF; font-weight: 800; font-size: 20px; padding: 16px 20px">04</div>
+      <div style="background: #FFFFFF; color: #141414; font-weight: 800; font-size: 22px; letter-spacing: 0.04em; padding: 16px 26px; display: flex; align-items: center">PACK IT</div>
+    </div>
+    <div style="position: absolute; bottom: 90px; right: 80px; display: flex; z-index: 2; box-shadow: 0 14px 34px rgba(0,0,0,0.25)">
+      <div style="background: #141414; color: #FFFFFF; font-weight: 800; font-size: 20px; padding: 16px 20px">07</div>
+      <div style="background: #FFFFFF; color: #141414; font-weight: 800; font-size: 22px; letter-spacing: 0.04em; padding: 16px 26px; display: flex; align-items: center">FRAME IT</div>
+    </div>
+
+    <div style="position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 24px 24px 88px">
+
+      <!-- header card -->
+      <div style="background: #FFFFFF; border-radius: 10px; padding: 16px 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 12px 36px rgba(20,20,20,0.18)">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <div style="color: #AE1932; font-weight: 700; font-size: 13px; line-height: 1.3">Erasmus<br>School of<br>Law</div>
+          <div style="width: 1px; height: 38px; background: #E4E0DA"></div>
+          <div style="font-size: 12px; font-weight: 600; color: #6E6862; letter-spacing: 0.08em; text-transform: uppercase">International journey</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 28px">
+          <a href="https://mastersinrecht.nl/en/" target="_blank" style="color: #1A1A1A; font-weight: 600; font-size: 15px; text-decoration: none" style-hover="color: #AE1932">Programmes</a>
+          <span onClick="{{ goJourney }}" style="color: #1A1A1A; font-weight: 600; font-size: 15px; cursor: pointer" style-hover="color: #AE1932">Your journey</span>
+          <a href="https://www.eur.nl/en/esl/master-open-day" target="_blank" style="background: #141414; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; padding: 13px 24px; border-radius: 4px" style-hover="background: #AE1932">Open Days</a>
+        </div>
+      </div>
+
+      <!-- hero copy -->
+      <div style="max-width: 560px; margin-top: 92px; color: #FFFFFF">
+        <div style="font-size: 13px; letter-spacing: 0.2em; font-weight: 700; text-transform: uppercase; color: #F4C8D2">The international student journey</div>
+        <h1 style="font-size: 74px; font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; margin: 18px 0 0">Maybe<br>Rotterdam?</h1>
+        <p style="font-size: 18px; line-height: 1.65; margin: 26px 0 0; max-width: 470px; text-wrap: pretty">From the first daydream to your graduation photo on the Erasmus Bridge. This is the whole journey of an international student at Erasmus School of Law. In seven stages, honest about the hard parts but excited about everything else.</p>
+        <div style="display: flex; align-items: center; gap: 24px; margin-top: 38px">
+          <div onClick="{{ goJourney }}" style="background: #141414; color: #FFFFFF; font-weight: 700; font-size: 16px; padding: 16px 28px; border-radius: 4px; cursor: pointer" style-hover="background: #000000; transform: translateY(-2px)">Start the journey ↓</div>
+          <a href="https://www.eur.nl/en/esl/education/chat-our-students" target="_blank" style="color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none; display: flex; align-items: center; gap: 10px" style-hover="gap: 16px">Chat with a student <span style="font-weight: 800">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ STATS BAND ============ -->
+  <div data-screen-label="Stats" style="background: #FFFFFF">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 44px 24px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 46px; font-weight: 800; color: #AE1932; letter-spacing: -0.02em">45+</div>
+        <div style="font-size: 14.5px; font-weight: 500; color: #5A554F; line-height: 1.5">nationalities studying together at one law school</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-left: 1px solid #E4E0DA; padding-left: 32px">
+        <div style="font-size: 46px; font-weight: 800; color: #AE1932; letter-spacing: -0.02em">№1</div>
+        <div style="font-size: 14.5px; font-weight: 500; color: #5A554F; line-height: 1.5">Europe’s largest port — your case-study backyard</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-left: 1px solid #E4E0DA; padding-left: 32px">
+        <div style="font-size: 46px; font-weight: 800; color: #AE1932; letter-spacing: -0.02em">12 mo</div>
+        <div style="font-size: 14.5px; font-weight: 500; color: #5A554F; line-height: 1.5">orientation year to live &amp; work in NL after graduating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ JOURNEY ============ -->
+  <div id="journey-top" data-screen-label="Journey" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 24px">
+
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.2em; font-weight: 700; text-transform: uppercase; color: #AE1932">From maybe to definitely</div>
+        <h2 style="font-size: 44px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.02em; margin: 12px 0 0">Seven stages. One hand to hold.</h2>
+      </div>
+      <div style="display: flex; background: #FFFFFF; border-radius: 999px; padding: 4px; gap: 4px; box-shadow: 0 8px 24px rgba(20,20,20,0.08)">
+        <div onClick="{{ setTimeline }}" style="padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; background: {{ tlBg }}; color: {{ tlCol }}">Scroll timeline</div>
+        <div onClick="{{ setStory }}" style="padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; background: {{ stBg }}; color: {{ stCol }}">Step by step</div>
+      </div>
+    </div>
+
+    <!-- sticky stage nav -->
+    <div style="position: sticky; top: 12px; z-index: 40; margin-top: 30px">
+      <div style="background: #FFFFFF; border-radius: 999px; padding: 8px; display: flex; gap: 4px; box-shadow: 0 12px 32px rgba(20,20,20,0.12); overflow-x: auto">
+        <div onClick="{{ nav.dream.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.dream.bg }}" style-hover="background: {{ nav.dream.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.dream.numCol }}">01</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.dream.labCol }}; white-space: nowrap">Dream</span>
+        </div>
+        <div onClick="{{ nav.choose.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.choose.bg }}" style-hover="background: {{ nav.choose.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.choose.numCol }}">02</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.choose.labCol }}; white-space: nowrap">Choose</span>
+        </div>
+        <div onClick="{{ nav.apply.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.apply.bg }}" style-hover="background: {{ nav.apply.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.apply.numCol }}">03</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.apply.labCol }}; white-space: nowrap">Apply</span>
+        </div>
+        <div onClick="{{ nav.prepare.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.prepare.bg }}" style-hover="background: {{ nav.prepare.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.prepare.numCol }}">04</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.prepare.labCol }}; white-space: nowrap">Prepare</span>
+        </div>
+        <div onClick="{{ nav.arrive.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.arrive.bg }}" style-hover="background: {{ nav.arrive.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.arrive.numCol }}">05</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.arrive.labCol }}; white-space: nowrap">Arrive</span>
+        </div>
+        <div onClick="{{ nav.study.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.study.bg }}" style-hover="background: {{ nav.study.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.study.numCol }}">06</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.study.labCol }}; white-space: nowrap">Study</span>
+        </div>
+        <div onClick="{{ nav.beyond.go }}" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; cursor: pointer; flex: 1 1 auto; justify-content: center; background: {{ nav.beyond.bg }}" style-hover="background: {{ nav.beyond.hoverBg }}">
+          <span style="font-weight: 800; font-size: 12px; color: {{ nav.beyond.numCol }}">07</span>
+          <span style="font-weight: 600; font-size: 13.5px; color: {{ nav.beyond.labCol }}; white-space: nowrap">Beyond</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- stages -->
+    <div style="margin-top: 40px; display: flex; flex-direction: column">
+      <!-- ===== STAGE 01 · DREAM ===== -->
+      <sc-if value="{{ show.dream }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-0" data-screen-label="Stage 01 — Maybe Rotterdam?" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">01</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 01 · Dreaming</div>
+                <div style="background: #141414; color: #FFFFFF; font-size: 12.5px; font-weight: 700; padding: 8px 14px; border-radius: 4px">Master Open Day · 21 Nov 2026</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Maybe Rotterdam?</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">It starts with a thought. A skyline that looks nothing like the rest of the Netherlands, Europe’s largest port, and a law school where students from 45+ countries study, debate and moot together — in English.</p>
+                  <div style="background: #F6F4F1; border-radius: 10px; padding: 18px 22px; margin-top: 24px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">What to expect</div>
+                    <p style="font-size: 14.5px; line-height: 1.65; color: #3A3631; margin: 8px 0 0; text-wrap: pretty">Honest from minute one: Erasmus School of Law’s international programmes are master’s level. The LL.M. programmes are fully English-taught; most bachelor programmes are in Dutch. This journey is built for future master students.</p>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/esl" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Meet Erasmus School of Law</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/esl/education/master/overview" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">All master programmes at a glance</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.dream_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">Do I need to speak Dutch?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.dream_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.dream_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">No. The LL.M. programmes are fully English-taught and the Netherlands is famously fluent in English. Dutch is for bonus points at the market — we’ll teach you ‘lekker’.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage1-dream.webp" alt="Rotterdam skyline with the Erasmus Bridge over the Maas" style="width: 100%; height: 175px; object-fit: cover; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Browse the English-taught LL.M. programmes</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Follow the International Office on Instagram</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Sign up for the Master Open Day</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Talk to a current international student</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="background: #AE1932; border-radius: 12px; padding: 22px 24px; color: #FFFFFF">
+                    <div style="font-size: 15.5px; line-height: 1.6; font-weight: 600; text-wrap: pretty">“Rotterdam felt like a city that was going somewhere. I wanted to go with it.”</div>
+                    <div style="display: flex; align-items: center; gap: 11px; margin-top: 16px">
+                      <div aria-hidden="true" style="width: 38px; height: 38px; flex: 0 0 auto; border-radius: 50%; background: #F4C8D2"></div>
+                      <div>
+                        <div style="font-size: 13px; font-weight: 800">Aisha</div>
+                        <div style="font-size: 11.5px; font-weight: 500; color: #F4C8D2">LL.M. International &amp; European Union Law</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 02 · CHOOSE ===== -->
+      <sc-if value="{{ show.choose }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-1" data-screen-label="Stage 02 — Find the programme that fits" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">02</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 02 · Choosing</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Find the programme that fits</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">English-taught LL.M. specialisations — from Maritime &amp; Transport Law (you’re in the right city) to Law &amp; Technology — plus a research master in criminology. Pick by ambition, not by alphabet.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px">
+                    <a href="https://mastersinrecht.nl/en/master/commercial-and-company-law/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">Commercial &amp; Company Law <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/international-business-law/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">International Business Law <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/international-arbitration/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">International Arbitration <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/international-and-european-union-law/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">International &amp; EU Law <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/law-and-technology/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">Law &amp; Technology <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/maritime-and-transport-law/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">Maritime &amp; Transport Law <span style="font-size: 12px">↗</span></a>
+                    <a href="https://mastersinrecht.nl/en/master/european-master-law-economics/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">European Master in Law &amp; Economics <span style="font-size: 12px">↗</span></a>
+                    <a href="https://internationalmastercriminology.eu/" target="_blank" style="border: 1.5px solid #E0AAB6; color: #AE1932; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 999px; display: flex; align-items: center; gap: 7px" style-hover="background: #AE1932; color: #FFFFFF; border-color: #AE1932">IMARC <span style="font-size: 12px">↗</span></a>
+                  </div>
+                  <div style="background: #141414; border-radius: 10px; padding: 20px 24px; margin-top: 24px">
+                    <div style="display: flex; align-items: center; gap: 9px">
+                      <div style="width: 9px; height: 9px; background: #AE1932; flex: 0 0 auto"></div>
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #F4C8D2; text-transform: uppercase">Reality check · Entry rules</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px">
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">All LL.M. programmes require a bachelor’s degree in law from a recognised university</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                          <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">English proficiency:</span>
+                          <div style="display: flex; gap: 10px; align-items: flex-start">
+                            <div aria-hidden="true" style="width: 5px; height: 5px; background: #F4C8D2; flex: 0 0 auto; margin-top: 9px"></div>
+                            <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">TOEFL: A minimum overall score of 90, with at least a score of 20 in each section.</span>
+                          </div>
+                          <div style="display: flex; gap: 10px; align-items: flex-start">
+                            <div aria-hidden="true" style="width: 5px; height: 5px; background: #F4C8D2; flex: 0 0 auto; margin-top: 9px"></div>
+                            <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">IELTS: A minimum overall score of 6.5, with at least a score of 6.0 in each section.</span>
+                          </div>
+                          <div style="display: flex; gap: 10px; align-items: flex-start">
+                            <div aria-hidden="true" style="width: 5px; height: 5px; background: #F4C8D2; flex: 0 0 auto; margin-top: 9px"></div>
+                            <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Cambridge CAE or CPE: A minimum grade of C.</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Only students applying for IEUL (International and European Union Law) or Law &amp; Tech can be considered for admission if they hold a non-law degree. However, they must have completed a substantial number of ECTS credits in law courses.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/esl/education/master/overview" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">All LL.M. programmes &amp; curricula</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/education/practical-matters/registration/first-registration/master" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6"><span style="font-size: 15px; font-weight: 600; color: rgb(26, 26, 26)">How to register for your master</span>
+                      <span style="color: rgb(174, 25, 50); font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.choose_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">Can I apply to more than one programme?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.choose_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.choose_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">You can — each application is assessed on its own. Most students end up focusing on the one that genuinely matches their plans.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage2-choose.webp" alt="students in a lecture hall" style="width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Shortlist two or three programmes</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Read each programme’s admission requirements</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Compare curricula and career paths</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Email admissions your edge-case questions</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 03 · APPLY ===== -->
+      <sc-if value="{{ show.apply }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-2" data-screen-label="Stage 03 — Apply &amp; get admitted" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">03</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 03 · Applying</div>
+                <div style="background: #141414; color: #FFFFFF; font-size: 12.5px; font-weight: 700; padding: 8px 14px; border-radius: 4px">Non-EEA? Aim to apply by early spring</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Apply &amp; get admitted</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">Two steps: register in Studielink, the Dutch national portal, then complete your file with EUR — transcripts, English test, motivation. Then the hardest part: waiting.</p>
+                  <div style="background: #141414; border-radius: 10px; padding: 20px 24px; margin-top: 24px">
+                    <div style="display: flex; align-items: center; gap: 9px">
+                      <div style="width: 9px; height: 9px; background: #AE1932; flex: 0 0 auto"></div>
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #F4C8D2; text-transform: uppercase">Reality check · The fine print</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px">
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Apply early — after admission, non-EEA students still need months for visa and housing</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start"><span style="color: rgb(174, 25, 50); font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: rgb(232, 228, 224)">Tuition differs: the statutory fee (EU/EEA, roughly €2,700) versus the institutional fee for non-EEA students (roughly €22,000)<span style="font-family: Aptos, sans-serif; font-size: 12pt">&nbsp;</span></span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">A Studielink registration alone is not a complete application — finish your document upload</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/education/practical-matters/registration/first-registration/master" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">How to register, step by step</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/esl/education/master/overview" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Pick your programme page</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.apply_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">When will I hear back?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.apply_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.apply_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">Most decisions follow within weeks once your file is complete. Conditional offers (for example pending graduation) are common, so you can keep moving while you finish your bachelor.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage3-apply.webp" alt="Smiling student standing on the Erasmus University campus" style="width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Create your Studielink account</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Book your English test now — slots fill up</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Collect certified transcripts and diploma</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Write a motivation that is specific, not long</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Hit submit. Celebrate appropriately.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 04 · PREPARE ===== -->
+      <sc-if value="{{ show.prepare }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-3" data-screen-label="Stage 04 — Visa, housing &amp; money" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">04</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 04 · Preparing</div>
+                <div style="background: #141414; color: #FFFFFF; font-size: 12.5px; font-weight: 700; padding: 8px 14px; border-radius: 4px">Visa process starts ±12 weeks before day one</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Visa, housing &amp; money</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">Admitted? Fantastic. Now comes the practical sprint — and this is where we hold your hand the tightest, because honesty matters most here.</p>
+                  <div style="background: #141414; border-radius: 10px; padding: 20px 24px; margin-top: 24px">
+                    <div style="display: flex; align-items: center; gap: 9px">
+                      <div style="width: 9px; height: 9px; background: #AE1932; flex: 0 0 auto"></div>
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #F4C8D2; text-transform: uppercase">Reality check · Read this twice</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px">
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Housing is genuinely tight. EUR reserves about 1,200 rooms — roughly a quarter of incoming internationals. Register for reserved housing the day it opens.</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Budget around €1,000–1,800 a month for living costs, on top of tuition</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Non-EU? You cannot apply for a residence permit yourself — EUR’s Team Immigration does it for you. Respond fast, every time.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/education/practical-matters/orientation-arrival/housing-international-students" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Housing for international students</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/education/practical-matters/orientation-arrival/housing-international-students/reserved-accommodation" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Reserved accommodation providers</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/education/practical-matters/immigration/visa-or-residence-permit" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Visa &amp; residence permit, step by step</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.prepare_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">What if I have no room when the semester starts?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.prepare_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.prepare_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">Don’t fly without a room. Widen your search to Schiedam and Capelle aan den IJssel, watch the International Office housing webinars, and email studenthousing@eur.nl — they answer.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage4-prepare.webp" alt="Cyclists crossing a street in Rotterdam near the Cube Houses" style="width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 25% center; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Reply to Team Immigration the day they email</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Register for reserved accommodation immediately</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Arrange health insurance and proof of finances</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Never pay a deposit via Western Union — scams are real</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 05 · ARRIVE ===== -->
+      <sc-if value="{{ show.arrive }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-4" data-screen-label="Stage 05 — Touch down in Rotterdam" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">05</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 05 · Arriving</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Touch down in Rotterdam</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">Keys in hand, passport stamped. Now the fun bureaucracy: City Hall, bank account, digital campus card — most of it in one go at the One Stop Shop on campus. Then Welcome Day, and a city best learned by bike.</p>
+                  <div style="background: #F6F4F1; border-radius: 10px; padding: 18px 22px; margin-top: 24px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">What to expect</div>
+                    <p style="font-size: 14.5px; line-height: 1.65; color: #3A3631; margin: 8px 0 0; text-wrap: pretty">The first weeks are a happy blur. You will queue, sign and register — and somewhere in between make half your friends for the year.</p>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/education/practical-matters/international-office" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">The International Office is your home base</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://www.eur.nl/en/education/study-rotterdam/living-here/city-hall" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Registering at City Hall</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.arrive_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">Will I actually make friends?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.arrive_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.arrive_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">Students from 45+ countries at the law school alone. Between Welcome Day, workgroups and study associations, the real challenge is finding a free evening.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage5-arrive.webp" alt="Cyclists on a sunlit Rotterdam street" style="width: 100%; height: 175px; object-fit: cover; object-position: center 82%; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Register at City Hall (required if you stay 4+ months)</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Open a Dutch bank account</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Buy a second-hand bike — it’s a personality here</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Join the International Welcome Day</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="background: #AE1932; border-radius: 12px; padding: 22px 24px; color: #FFFFFF">
+                    <div style="font-size: 15.5px; line-height: 1.6; font-weight: 600; text-wrap: pretty">“Day three I got lost on campus. Day ten I was giving directions.”</div>
+                    <div style="display: flex; align-items: center; gap: 11px; margin-top: 16px">
+                      <div aria-hidden="true" style="width: 38px; height: 38px; flex: 0 0 auto; border-radius: 50%; background: #F4C8D2"></div>
+                      <div>
+                        <div style="font-size: 13px; font-weight: 800">Priya</div>
+                        <div style="font-size: 11.5px; font-weight: 500; color: #F4C8D2">LL.M. Commercial &amp; Company Law</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 06 · STUDY ===== -->
+      <sc-if value="{{ show.study }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-5" data-screen-label="Stage 06 — Study like a Rotterdammer" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">06</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 06 · Studying</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Study like a Rotterdammer</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">Small-scale, activating education: workgroups where you argue out loud, field trips to courts, law firms and the port. Where law meets business — not as a slogan, but as your Tuesday.</p>
+                  <div style="background: #141414; border-radius: 10px; padding: 20px 24px; margin-top: 24px">
+                    <div style="display: flex; align-items: center; gap: 9px">
+                      <div style="width: 9px; height: 9px; background: #AE1932; flex: 0 0 auto"></div>
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #F4C8D2; text-transform: uppercase">Reality check · Expect to work</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px">
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">The pace is real: reading-heavy weeks and active participation are the norm, not the exception</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Dutch grading culture: an 8 is excellent and a 10 is folklore — recalibrate early</span>
+                      </div>
+                      <div style="display: flex; gap: 12px; align-items: flex-start">
+                        <span style="color: #AE1932; font-weight: 800; flex: 0 0 auto">—</span>
+                        <span style="font-size: 14px; line-height: 1.6; color: #E8E4E0">Workgroups expect you prepared, in English, out loud</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.instagram.com/erasmuslawschool/" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Life at Erasmus School of Law</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.study_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">Can I work next to my studies?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.study_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.study_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">EU/EEA students can work freely. Non-EU students are limited in hours and the employer needs a permit — plan your budget without counting on a side job.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage6-study.webp" alt="Students working together at a laptop in the library" style="width: 100%; height: 175px; object-fit: cover; object-position: center 40%; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Plan your week around the reading list</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Join a study association or moot court</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Go on the field trips — that’s where it clicks</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Struggling? Book your student adviser early, not late</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <!-- ===== STAGE 07 · BEYOND ===== -->
+      <sc-if value="{{ show.beyond }}" hint-placeholder-val="{{ true }}">
+        <div id="stage-sec-6" data-screen-label="Stage 07 — Graduation &amp; beyond" style="display: grid; grid-template-columns: {{ gridCols }}">
+          <div style="display: {{ railDisplay }}; flex-direction: column; align-items: center; gap: 0">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #AE1932; color: #FFFFFF; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">07</div>
+            <div style="width: 2px; flex: 1; background: #DCD7D0; margin: 8px 0"></div>
+          </div>
+          <div style="padding: 0 0 36px 0">
+            <div style="background: #FFFFFF; border-radius: 14px; padding: 38px 42px; box-shadow: 0 16px 44px rgba(20,20,20,0.07)">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap">
+                <div style="background: #F7E8EB; color: #AE1932; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 4px">Stage 07 · Beyond</div>
+              </div>
+              <h3 style="font-size: 34px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.01em; margin: 20px 0 0">Graduation &amp; beyond</h3>
+              <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 40px; margin-top: 22px">
+                <div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+                  <p style="font-size: 16.5px; line-height: 1.7; color: #3A3631; margin: 0; text-wrap: pretty">Gown on, photo on the bridge. ESL graduates move into international law firms, EU institutions, multinationals, courts and the maritime sector — often via the network they built right here.</p>
+                  <div style="background: #F6F4F1; border-radius: 10px; padding: 18px 22px; margin-top: 24px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">What to expect</div>
+                    <p style="font-size: 14.5px; line-height: 1.65; color: #3A3631; margin: 8px 0 0; text-wrap: pretty">Want to stay? Non-EU graduates can apply for the orientation year: twelve months to live and work in the Netherlands after graduating, no separate work permit needed.</p>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: 26px">
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase; padding-bottom: 8px">On eur.nl</div>
+                    <a href="https://www.eur.nl/en/esl" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Stay connected with ESL</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                    <a href="https://ind.nl/en" target="_blank" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 4px; border-top: 1px solid #E4E0DA; text-decoration: none" style-hover="background: #FAF8F6">
+                      <span style="font-size: 15px; font-weight: 600; color: #1A1A1A">Orientation year — Dutch immigration service (IND)</span>
+                      <span style="color: #AE1932; font-weight: 800; font-size: 17px">→</span>
+                    </a>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                    <div style="border: 1px solid #E4E0DA; border-radius: 10px; overflow: hidden">
+                      <div onClick="{{ fq.beyond_0.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 18px; cursor: pointer" style-hover="background: #FAF8F6">
+                        <span style="font-weight: 700; font-size: 14.5px; color: #1A1A1A">What is my degree worth internationally?</span>
+                        <span style="color: #AE1932; font-weight: 800; font-size: 18px; flex: 0 0 auto">{{ fq.beyond_0.icon }}</span>
+                      </div>
+                      <div style="display: {{ fq.beyond_0.display }}; padding: 0 18px 16px; font-size: 14px; line-height: 1.65; color: #5A554F">An LL.M. from a research university in the EU, from a school known for where law meets business. Graduates work across Europe and far beyond — the alumni map is half the fun.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+                  <img src="img/stage7-beyond.webp" alt="Graduates throwing their caps in the air" style="width: 100%; height: 175px; object-fit: cover; object-position: center 45%; border-radius: 12px; display: block">
+                  <div style="background: #F6F4F1; border-radius: 12px; padding: 18px 20px">
+                    <div style="padding-bottom: 6px">
+                      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.14em; color: #6E6862; text-transform: uppercase">Your to-do list</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Update LinkedIn before the gown comes off</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Join the alumni network</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Non-EU: look into the orientation year visa</span>
+                      </div>
+                      <div style="display: flex; gap: 11px; align-items: flex-start; padding: 5px 0">
+                        <div aria-hidden="true" style="width: 7px; height: 7px; background: #AE1932; flex: 0 0 auto; margin-top: 8px"></div>
+                        <span style="font-size: 13.5px; line-height: 1.5; font-weight: 500; color: #1A1A1A">Send us a postcard from your first job</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="background: #AE1932; border-radius: 12px; padding: 22px 24px; color: #FFFFFF">
+                    <div style="font-size: 15.5px; line-height: 1.6; font-weight: 600; text-wrap: pretty">“I came for the LL.M. I stayed for the career. The bitterballen helped.”</div>
+                    <div style="display: flex; align-items: center; gap: 11px; margin-top: 16px">
+                      <div aria-hidden="true" style="width: 38px; height: 38px; flex: 0 0 auto; border-radius: 50%; background: #F4C8D2"></div>
+                      <div>
+                        <div style="font-size: 13px; font-weight: 800">Daniel</div>
+                        <div style="font-size: 11.5px; font-weight: 500; color: #F4C8D2">Alumnus · maritime sector, Rotterdam</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- story controls -->
+    <sc-if value="{{ isStory }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 4px; padding-bottom: 16px">
+        <div onClick="{{ onPrev }}" style="border: 2px solid #141414; color: #141414; font-weight: 700; font-size: 15px; padding: 13px 24px; border-radius: 4px; cursor: pointer; opacity: {{ prevOp }}" style-hover="background: #141414; color: #FFFFFF">← Previous</div>
+        <div style="font-size: 13px; font-weight: 700; color: #6E6862; letter-spacing: 0.08em; text-transform: uppercase">{{ storyCounter }}</div>
+        <div onClick="{{ onNext }}" style="background: #141414; color: #FFFFFF; font-weight: 700; font-size: 15px; padding: 15px 26px; border-radius: 4px; cursor: pointer; opacity: {{ nextOp }}" style-hover="background: #AE1932">{{ nextLabel }}</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <div data-screen-label="Closing CTA" style="background: #AE1932; margin-top: 40px">
+    <div style="max-width: 880px; margin: 0 auto; padding: 84px 24px; text-align: center; color: #FFFFFF">
+      <h2 style="font-size: 48px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin: 0">From “maybe” to<br>“see you in September”.</h2>
+      <p style="font-size: 17px; line-height: 1.65; margin: 22px auto 0; max-width: 540px; text-wrap: pretty">The best way to decide is to come feel the city. Join an Open Day, walk the campus, count the cranes in the port — then tell us it’s still a maybe.</p>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 36px">
+        <a href="https://www.eur.nl/en/esl/master-open-day" target="_blank" style="background: #141414; color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none; padding: 16px 28px; border-radius: 4px" style-hover="background: #000000">Visit an Open Day</a>
+        <a href="https://mastersinrecht.nl/en/" target="_blank" style="color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none; display: flex; align-items: center; gap: 10px" style-hover="gap: 16px">All master programmes <span style="font-weight: 800">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SOCIAL ============ -->
+  <div data-screen-label="Stay in the loop" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px">
+    <h2 style="font-size: 40px; font-weight: 800; color: #1A1A1A; letter-spacing: -0.02em; margin: 0">Stay in the loop!</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 32px">
+      <a href="https://rechtinrotterdam.nl/en/" target="_blank" style="background: #FFFFFF; border-radius: 12px; padding: 28px 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(20,20,20,0.06)" style-hover="transform: translateY(-3px); box-shadow: 0 16px 40px rgba(20,20,20,0.12)">
+        <div>
+          <div style="color: #AE1932; font-size: 14px; font-weight: 600">For prospective students</div>
+          <div style="color: #141414; font-size: 26px; font-weight: 800; margin-top: 2px">Our website</div>
+        </div>
+        <div style="font-size: 34px; font-weight: 800; color: #E0AAB6; line-height: 1; flex: 0 0 auto">→</div>
+      </a>
+      <a href="https://www.instagram.com/erasmuslawschool/" target="_blank" style="background: #FFFFFF; border-radius: 12px; padding: 28px 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(20,20,20,0.06)" style-hover="transform: translateY(-3px); box-shadow: 0 16px 40px rgba(20,20,20,0.12)">
+        <div>
+          <div style="color: #AE1932; font-size: 14px; font-weight: 600">Follow us on</div>
+          <div style="color: #141414; font-size: 26px; font-weight: 800; margin-top: 2px">Instagram</div>
+        </div>
+        <div style="width: 44px; height: 44px; border: 2.5px solid #E0AAB6; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+          <div style="width: 16px; height: 16px; border: 2.5px solid #E0AAB6; border-radius: 50%"></div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/school/erasmus-school-of-law" target="_blank" style="background: #FFFFFF; border-radius: 12px; padding: 28px 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(20,20,20,0.06)" style-hover="transform: translateY(-3px); box-shadow: 0 16px 40px rgba(20,20,20,0.12)">
+        <div>
+          <div style="color: #AE1932; font-size: 14px; font-weight: 600">Follow us on</div>
+          <div style="color: #141414; font-size: 26px; font-weight: 800; margin-top: 2px">LinkedIn</div>
+        </div>
+        <div style="font-size: 34px; font-weight: 800; color: #E0AAB6; line-height: 1; flex: 0 0 auto">in</div>
+      </a>
+      <a href="https://www.tiktok.com/@recht.in.rotterdam" target="_blank" style="background: #FFFFFF; border-radius: 12px; padding: 28px 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-decoration: none; box-shadow: 0 10px 30px rgba(20,20,20,0.06)" style-hover="transform: translateY(-3px); box-shadow: 0 16px 40px rgba(20,20,20,0.12)">
+        <div>
+          <div style="color: #AE1932; font-size: 14px; font-weight: 600">Follow us on</div>
+          <div style="color: #141414; font-size: 26px; font-weight: 800; margin-top: 2px">TikTok</div>
+        </div>
+        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E0AAB6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M9 18V5l11-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="17" cy="16" r="3"></circle></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div data-screen-label="Footer" style="background: #141414; color: #B5AFA8">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 44px 24px; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap">
+        <div style="color: #FFFFFF; font-weight: 700; font-size: 13px; line-height: 1.3">Erasmus<br>School of<br>Law</div>
+        <div style="display: flex; gap: 28px; flex-wrap: wrap">
+          <a href="https://www.eur.nl/en/esl" target="_blank" style="color: #B5AFA8; font-size: 13.5px; font-weight: 600; text-decoration: none" style-hover="color: #FFFFFF">Erasmus School of Law</a>
+          <a href="https://mastersinrecht.nl/en/" target="_blank" style="color: #B5AFA8; font-size: 13.5px; font-weight: 600; text-decoration: none" style-hover="color: #FFFFFF">Master programmes</a>
+          <a href="https://www.eur.nl/en/education/practical-matters/orientation-arrival/housing-international-students" target="_blank" style="color: #B5AFA8; font-size: 13.5px; font-weight: 600; text-decoration: none" style-hover="color: #FFFFFF">Housing</a>
+          <a href="https://www.eur.nl/en/education/practical-matters/immigration" target="_blank" style="color: #B5AFA8; font-size: 13.5px; font-weight: 600; text-decoration: none" style-hover="color: #FFFFFF">Immigration</a>
+          <a href="https://www.eur.nl/en/education/practical-matters/international-office" target="_blank" style="color: #B5AFA8; font-size: 13.5px; font-weight: 600; text-decoration: none" style-hover="color: #FFFFFF">International Office</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #2B2B2B; padding-top: 20px; font-size: 12.5px; line-height: 1.6">This page is a guided overview. Every stage links to the official, always-current information on eur.nl — deadlines, fees and figures shown here are indicative; eur.nl is leading.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"journeyLayout":{"editor":"enum","options":["timeline","story"],"default":"timeline"},"$preview":{"width":1440,"height":7600}}'>
+// Stage order, nav label (for the "Next:" button) and how many FAQs each stage has.
+// The stage texts themselves live in the markup above.
+const STAGES = [{"id": "dream", "short": "Dream", "faqs": 1}, {"id": "choose", "short": "Choose", "faqs": 1}, {"id": "apply", "short": "Apply", "faqs": 1}, {"id": "prepare", "short": "Prepare", "faqs": 1}, {"id": "arrive", "short": "Arrive", "faqs": 1}, {"id": "study", "short": "Study", "faqs": 1}, {"id": "beyond", "short": "Beyond", "faqs": 1}];
+
+class Component extends DCLogic {
+  state = { layoutOverride: null, active: 0, spy: 0, faqOpen: {} };
+
+  layout() {
+    return this.state.layoutOverride || this.props.journeyLayout || "timeline";
+  }
+
+  componentDidMount() {
+    this._onScroll = () => {
+      if (this.layout() !== "timeline") return;
+      let idx = 0;
+      for (let i = 0; i < STAGES.length; i++) {
+        const el = document.getElementById("stage-sec-" + i);
+        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) idx = i;
+      }
+      if (idx !== this.state.spy) this.setState({ spy: idx });
+    };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this._onScroll);
+  }
+
+  toggleFaq(key) {
+    this.setState((s) => {
+      const faqOpen = Object.assign({}, s.faqOpen);
+      faqOpen[key] = !faqOpen[key];
+      return { faqOpen };
+    });
+  }
+
+  scrollToEl(id, offset) {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }
+
+  goStage(i) {
+    if (this.layout() === "story") {
+      this.setState({ active: i });
+      this.scrollToEl("journey-top", 16);
+    } else {
+      this.scrollToEl("stage-sec-" + i, 92);
+    }
+  }
+
+  renderVals() {
+    const RED = "#AE1932", INK = "#1A1A1A", MUT = "#6E6862";
+    const isStory = this.layout() === "story";
+    const n = STAGES.length;
+    const active = Math.min(this.state.active, n - 1);
+    const current = isStory ? active : this.state.spy;
+
+    const show = {}, nav = {}, fq = {};
+    STAGES.forEach((st, i) => {
+      show[st.id] = !isStory || i === active;
+      nav[st.id] = {
+        go: () => this.goStage(i),
+        bg: i === current ? RED : "transparent",
+        hoverBg: i === current ? RED : "#F6F4F1",
+        numCol: i === current ? "#F4C8D2" : RED,
+        labCol: i === current ? "#FFFFFF" : INK
+      };
+      for (let f = 0; f < st.faqs; f++) {
+        const key = st.id + "-" + f;
+        const open = !!this.state.faqOpen[key];
+        fq[st.id + "_" + f] = {
+          toggle: () => this.toggleFaq(key),
+          display: open ? "block" : "none",
+          icon: open ? "–" : "+"
+        };
+      }
+    });
+
+    const setLayout = (l) => {
+      const patch = { layoutOverride: l };
+      if (l === "story") patch.active = this.state.spy;
+      this.setState(patch);
+      this.scrollToEl("journey-top", 16);
+    };
+
+    return {
+      goJourney: () => this.scrollToEl("journey-top", 16),
+      isStory, show, nav, fq,
+      gridCols: isStory ? "1fr" : "78px 1fr",
+      railDisplay: isStory ? "none" : "flex",
+      setTimeline: () => setLayout("timeline"),
+      setStory: () => setLayout("story"),
+      tlBg: !isStory ? "#141414" : "transparent",
+      tlCol: !isStory ? "#FFFFFF" : MUT,
+      stBg: isStory ? "#141414" : "transparent",
+      stCol: isStory ? "#FFFFFF" : MUT,
+      onPrev: () => { if (active > 0) this.goStage(active - 1); },
+      onNext: () => { if (active < n - 1) this.goStage(active + 1); },
+      prevOp: active === 0 ? 0.35 : 1,
+      nextOp: active === n - 1 ? 0.35 : 1,
+      nextLabel: active < n - 1 ? "Next: " + STAGES[active + 1].short + " →" : "You made it",
+      storyCounter: "Stage " + (active + 1) + " of " + n
+    };
+  }
+}
+</script>
+</body>
+</html>
